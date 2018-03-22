@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="e.thejo.eggmanslotmachine.MainActivity">
+
+    <LinearLayout
+        android:id="@+id/Slots"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp">
+        <ImageView
+            android:id="@+id/Slot1"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/sonic"/>
+        <ImageView
+            android:id="@+id/Slot2"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:background="@drawable/tails"/>
+        <ImageView
+            android:id="@+id/Slot3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginLeft="20dp"
+            android:background="@drawable/eggman"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/Score"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="50dp"
+        android:textSize="50dp"
+        android:layout_below="@id/Slots"
+        android:text="Score: 0"/>
+
+    <SeekBar
+        android:id="@+id/Speed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Score"
+        android:max="100"
+        android:min="10"
+        android:layout_marginTop="30dp"/>
+
+    <Button
+        android:id="@+id/Spinbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Speed"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="buttonHandler"
+        android:text="@string/startbutton"/>
+
+    <Button
+        android:id="@+id/Rules"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/Spinbtn"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:onClick="gotoRules"
+        android:text="@string/rule"/>
+</RelativeLayout>
